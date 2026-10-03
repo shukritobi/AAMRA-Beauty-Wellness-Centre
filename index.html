@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#d95a36">
+  <meta name="description" content="AAMRA Beauty & Wellness Centre, Setia Alam. Doctor-led beauty and wellness, spa, skin, hair and restorative self-care.">
+  <meta property="og:title" content="AAMRA Beauty & Wellness Centre">
+  <meta property="og:description" content="Where healing meets beauty. Explore treatments and request your appointment on WhatsApp.">
+  <title>AAMRA Beauty & Wellness Centre | Setia Alam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#241916;--paper:#f6efe8;--paper2:#fffaf5;--peach:#efb09b;--orange:#e85f37;
+      --rust:#a43f2b;--wine:#5e2824;--rose:#dab0a4;--line:rgba(36,25,22,.14);--white:#fffaf7;
+      --serif:"Instrument Serif",Georgia,serif;--sans:"DM Sans",Arial,sans-serif
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
+    a{color:inherit;text-decoration:none} button,input,select,textarea{font:inherit}button{cursor:pointer}
+    ::selection{background:var(--orange);color:#fff}
+    .noise{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.16;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.09'/%3E%3C/svg%3E")}
+    .nav{height:84px;padding:0 clamp(20px,5vw,72px);position:absolute;z-index:20;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.03em}
+    .brandmark{width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#ff7c4f,#a63c2b);display:grid;place-items:center;color:#fff;font-family:var(--serif);font-size:26px;font-style:italic;box-shadow:inset 0 0 0 1px rgba(255,255,255,.38),0 8px 20px rgba(118,48,31,.15)}
+    .brand em{font-family:var(--serif);font-weight:400;font-size:1.18em}.navlinks{display:flex;gap:28px;font-size:13px}.navlinks a{opacity:.72;transition:.2s}.navlinks a:hover{opacity:1}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:15px 22px;background:var(--ink);color:#fff;font-weight:700;font-size:13px;transition:.25s}.btn:hover{transform:translateY(-2px);background:#000}.btn.small{padding:10px 16px;font-size:12px}
+    .hero{min-height:820px;height:96vh;max-height:930px;position:relative;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;padding:140px clamp(24px,7vw,112px) 86px;background:radial-gradient(circle at 78% 30%,rgba(232,95,55,.25),transparent 26%),linear-gradient(145deg,#fbf6f1,#ecddd1 66%,#e7c7b5)}
+    .hero:before{content:"";position:absolute;width:650px;height:650px;border:1px solid rgba(106,48,33,.15);border-radius:50%;right:-245px;top:-250px}.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(106,48,33,.12);border-radius:50%;left:-190px;bottom:-300px}
+    .hero-copy{position:relative;z-index:3;max-width:760px}.kicker{display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}.kicker:before{content:"";width:30px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(72px,9.5vw,146px);line-height:.84;letter-spacing:-.045em;margin:26px 0 24px}.hero h1 i,.display i{font-weight:400;color:var(--rust)}
+    .lede{font-size:18px;line-height:1.65;max-width:620px;opacity:.78}.hero-actions{display:flex;gap:24px;align-items:center;margin-top:36px}.textlink{font-size:13px;font-weight:700;border-bottom:1px solid currentColor;padding-bottom:4px}
+    .hero-art{position:relative;width:min(41vw,530px);height:min(41vw,530px);justify-self:end;z-index:2}.sun{position:absolute;inset:6%;border-radius:50%;background:linear-gradient(145deg,#f57447,#c64b31 54%,#913326);box-shadow:0 36px 80px rgba(110,48,33,.22),inset 0 0 0 1px rgba(255,255,255,.28);overflow:hidden;display:grid;place-items:center}.sun:before{content:"";position:absolute;inset:-20%;background:linear-gradient(120deg,transparent 38%,rgba(255,255,255,.22) 39%,rgba(255,255,255,.06) 50%,transparent 51%);transform:rotate(-8deg)}
+    .hero-monogram{text-align:center;color:#fff;position:relative;z-index:2}.hero-monogram b{display:block;font-family:var(--serif);font-size:70px;font-style:italic;font-weight:400;letter-spacing:-.08em}.hero-monogram span{font-size:9px;letter-spacing:.22em;text-transform:uppercase}
+    .scribble{position:absolute;inset:-2%;width:104%;height:104%;fill:none;stroke:#6a2d21;stroke-width:1.1;opacity:.4;stroke-dasharray:4 8}.note{position:absolute;background:rgba(255,250,246,.88);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:14px 17px;font-size:11px;line-height:1.5;box-shadow:0 18px 44px rgba(54,31,23,.1);z-index:5}.note.a{left:-5%;bottom:16%;transform:rotate(-4deg)}.note.b{right:-3%;top:14%;transform:rotate(4deg)}.note b{font-size:12px}.note .star{color:#c58b43}
+    .marquee{position:absolute;bottom:0;left:0;right:0;height:48px;border-top:1px solid var(--line);display:flex;align-items:center;overflow:hidden;white-space:nowrap;font-size:10px;letter-spacing:.28em;font-weight:700;color:rgba(36,25,22,.54)}.marquee div{animation:move 26s linear infinite}@keyframes move{to{transform:translateX(-100%)}}
+    section{position:relative}.pad{padding:108px clamp(24px,7vw,112px)}.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:40px}.display{font-family:var(--serif);font-weight:400;font-size:clamp(58px,7.2vw,104px);line-height:.9;letter-spacing:-.04em;margin:0}
+    .intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:end}.intro-copy{font-size:17px;line-height:1.75;max-width:540px;opacity:.82}.intro-copy p{margin-bottom:16px}
+    .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:68px}.pillar{min-height:345px;padding:26px;border-radius:28px;display:flex;flex-direction:column;position:relative;overflow:hidden}.pillar:after{content:"";position:absolute;width:210px;height:210px;border:1px solid currentColor;border-radius:50%;right:-95px;top:-85px;opacity:.18}.pillar small{font-size:10px;letter-spacing:.18em}.pillar h3{font-family:var(--serif);font-size:46px;font-weight:400;margin:78px 0 10px}.pillar p{font-size:13px;line-height:1.6;opacity:.8}.pillar b{margin-top:auto;font-size:10px;letter-spacing:.15em;text-transform:uppercase}.c1{background:var(--rust);color:white}.c2{background:#dfd0c1}.c3{background:#dcb0a5}.c4{background:#30211f;color:#fff8f3}
+    .catalogue{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.catalogue-head{display:flex;justify-content:space-between;gap:50px;align-items:end}.catalogue-head>p{max-width:430px;line-height:1.6;font-size:13px;opacity:.66}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:48px 0 24px}.filter{border:1px solid var(--line);background:transparent;border-radius:999px;padding:10px 16px;font-size:11px;font-weight:600}.filter.active{background:var(--ink);color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.card{background:var(--paper2);min-height:280px;padding:28px;display:flex;flex-direction:column;position:relative;transition:.25s}.card:hover{background:#fff;z-index:2}.card.hide{display:none}.card.featured{background:#f1dfd8}.card-top{display:flex;justify-content:space-between;gap:15px;font-size:9px;letter-spacing:.15em;font-weight:700;text-transform:uppercase}.price{font-size:14px;letter-spacing:-.02em;text-transform:none}.price s{font-size:10px;opacity:.43;margin-left:5px}.card h3{font-family:var(--serif);font-size:35px;line-height:1.02;font-weight:400;margin:58px 0 12px}.card p{font-size:12px;line-height:1.65;opacity:.66;max-width:95%}.add{margin-top:auto;border:0;border-top:1px solid var(--line);background:transparent;padding:14px 0 0;display:flex;justify-content:space-between;font-size:11px;font-weight:700}.add span{font-size:18px;line-height:.75}.tag{position:absolute;right:18px;top:57px;background:var(--rust);color:#fff;padding:6px 9px;border-radius:999px;font-size:8px;letter-spacing:.14em;font-weight:700}
+    .founder{display:grid;grid-template-columns:.85fr 1.15fr;gap:95px;align-items:center;background:#e8dad0}.portrait{position:relative;min-height:620px;display:grid;place-items:center}.portrait:before{content:"";position:absolute;width:90%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(96,39,30,.27);transform:scale(1.12)}.portrait:after{content:"";position:absolute;width:75%;aspect-ratio:1;border-radius:50%;border:1px dashed rgba(96,39,30,.24)}.portrait img{width:min(88%,470px);aspect-ratio:1;object-fit:cover;object-position:50% 25%;border-radius:50%;position:relative;z-index:2;box-shadow:0 36px 80px rgba(72,37,29,.18)}.sig{position:absolute;z-index:3;right:3%;bottom:15%;font-family:var(--serif);font-style:italic;font-size:44px;color:var(--rust);transform:rotate(-8deg)}.founder-copy .quote{font-family:var(--serif);font-size:28px;line-height:1.3;color:var(--rust);max-width:670px}.founder-copy>p:not(.quote){font-size:16px;line-height:1.75;max-width:670px}.credentials{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.credentials span{font-size:9px;letter-spacing:.13em;text-transform:uppercase;border:1px solid var(--line);padding:9px 12px;border-radius:999px}
+    .book{background:var(--rust);color:#fff;padding-top:76px;padding-bottom:76px}.book-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;background:var(--wine);border-radius:36px;padding:clamp(28px,5vw,70px);overflow:hidden}.book .display{font-size:clamp(56px,7vw,96px)}.book .display i{color:#fac7b1}.book-copy>p{line-height:1.65;color:rgba(255,255,255,.75);max-width:530px}.facts{margin-top:44px;display:grid;gap:16px}.facts div{display:grid;grid-template-columns:95px 1fr;border-top:1px solid rgba(255,255,255,.16);padding-top:13px}.facts span{font-size:8px;letter-spacing:.16em;opacity:.55}.facts b{font-size:12px}
+    form{background:#fff8f3;color:var(--ink);border-radius:24px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:8px;font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.full{grid-column:1/-1}input,select,textarea{width:100%;border:1px solid #ddcec4;background:#fff;border-radius:12px;padding:14px;color:var(--ink);outline:none;text-transform:none;letter-spacing:normal;font-weight:400}input:focus,select:focus,textarea:focus{border-color:var(--rust)}textarea{resize:vertical}.submit{grid-column:1/-1;border:0;border-radius:13px;background:var(--ink);color:#fff;padding:17px 19px;font-weight:700;display:flex;align-items:center;justify-content:space-between}.formnote{grid-column:1/-1;font-size:9px;line-height:1.5;opacity:.58;margin:0}
+    .visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:90px}.visit-info{padding-top:8px}.address{font-family:var(--serif);font-size:27px;line-height:1.4;margin-bottom:36px}.row{display:grid;grid-template-columns:105px 1fr;border-top:1px solid var(--line);padding:14px 0;font-size:12px}.row span{opacity:.5}.row a,.row b{font-weight:700}.direction{margin-top:65px;background:var(--ink);color:#fff;min-height:165px;border-radius:24px;padding:0 38px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;transition:.25s}.direction:hover{background:#000;transform:translateY(-2px)}.direction span{font-size:9px;letter-spacing:.18em}.direction strong{font-family:var(--serif);font-size:clamp(52px,7vw,94px);font-weight:400}.direction em{justify-self:end;font-size:32px;font-style:normal}
+    footer{background:#1f1715;color:#fff7f1;padding:56px clamp(24px,7vw,112px) 34px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.footerbrand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:25px}.footerbrand .brandmark{width:45px;height:45px;font-size:28px}footer>p{text-align:right;font-family:var(--serif);font-style:italic;font-size:24px;color:#dda797;margin:0}.footerlinks{display:flex;gap:22px;font-size:11px}.footerlinks a{opacity:.65}footer small{text-align:right;opacity:.42;font-size:9px}
+    .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:#201816;color:#fff;padding:13px 18px;border-radius:999px;font-size:11px;z-index:120;transition:.32s;box-shadow:0 12px 38px rgba(0,0,0,.22)}.toast.show{transform:translate(-50%,0)}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .75s ease,transform .75s ease}.reveal.on{opacity:1;transform:none}
+    @media(max-width:980px){.navlinks{display:none}.hero{grid-template-columns:1fr;height:auto;min-height:980px}.hero-art{width:min(82vw,550px);height:min(82vw,550px);justify-self:center;margin-top:24px}.intro-grid,.founder,.book-shell,.visit-grid{grid-template-columns:1fr}.pillars{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.founder{gap:28px}.portrait{min-height:520px}.catalogue-head{flex-direction:column;align-items:flex-start}.pad{padding-top:84px;padding-bottom:84px}}
+    @media(max-width:640px){.nav{height:70px;padding:0 18px}.brandmark{width:34px;height:34px;font-size:22px}.brand span{font-size:12px}.btn.small{padding:9px 12px;font-size:10px}.hero{padding:108px 20px 76px;min-height:900px}.hero h1{font-size:clamp(70px,20vw,105px)}.lede{font-size:15px}.hero-actions{align-items:flex-start;flex-direction:column;gap:18px}.hero-art{width:90vw;height:90vw}.note.a{left:0}.note.b{right:0}.marquee{height:42px}.pad{padding:68px 20px}.eyebrow{margin-bottom:28px}.display{font-size:56px}.intro-grid{gap:28px}.pillars,.grid{grid-template-columns:1fr}.pillar{min-height:275px}.pillar h3{margin-top:52px}.card{min-height:250px}.portrait{min-height:410px}.sig{font-size:35px;bottom:8%}.book{padding:20px}.book-shell{padding:28px 18px;border-radius:26px}.book .display{font-size:54px}form{grid-template-columns:1fr;padding:18px}.field,.full,.submit,.formnote{grid-column:1}.facts div{grid-template-columns:82px 1fr}.visit-grid{gap:30px}.direction{grid-template-columns:1fr auto;padding:24px;min-height:140px}.direction strong{grid-row:2;grid-column:1/-1}.direction em{grid-column:2;grid-row:1}.row{grid-template-columns:88px 1fr}.address{font-size:23px}footer{grid-template-columns:1fr}footer>p,footer small{text-align:left}.footerlinks{flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<header class="nav">
+  <a class="brand" href="#top" aria-label="AAMRA home"><span class="brandmark">A</span><span>AAMRA <em>Wellness</em></span></a>
+  <nav class="navlinks" aria-label="Primary navigation"><a href="#experience">Experience</a><a href="#catalogue">Catalogue</a><a href="#founder">Dr Azra</a><a href="#visit">Visit</a></nav>
+  <a class="btn small" href="#book">Book a visit</a>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-copy reveal">
+    <div class="kicker">Doctor-led wellness · Setia Alam</div>
+    <h1>Come back to<br><i>yourself.</i></h1>
+    <p class="lede">A warm beauty and wellness space for massage, skin, hair and restorative self-care. Thoughtful treatments, a calm setting and an easier way to book your next reset.</p>
+    <div class="hero-actions"><a class="btn" href="#book">Book your reset</a><a class="textlink" href="#catalogue">Explore treatments ↗</a></div>
+  </div>
+  <div class="hero-art reveal">
+    <div class="sun"><div class="hero-monogram"><b>AAMRA</b><span>Beauty & Wellness Centre</span></div></div>
+    <svg class="scribble" viewBox="0 0 440 440" aria-hidden="true"><path d="M40 220c60-150 270-220 355-63 60 110-25 233-151 220-120-12-161-134-80-207 66-59 180-11 177 81"/></svg>
+    <div class="note a">Tuesday to Sunday<br><b>11am to 8pm</b></div>
+    <div class="note b"><span class="star">✦</span> Setia Alam<br><b>WhatsApp booking</b></div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div>REST · RENEW · GLOW · BREATHE · REST · RENEW · GLOW · BREATHE ·&nbsp;</div><div>REST · RENEW · GLOW · BREATHE · REST · RENEW · GLOW · BREATHE ·&nbsp;</div></div>
+</section>
+
+<section class="pad" id="experience">
+  <div class="eyebrow">01 · The AAMRA experience</div>
+  <div class="intro-grid">
+    <h2 class="display reveal">Beauty, but <i>softer.</i><br>Wellness, but <i>personal.</i></h2>
+    <div class="intro-copy reveal"><p>AAMRA brings head-to-toe care under one roof, from full-body massage and facial treatments to hair care, laser hair reduction and postnatal wellness.</p><p>The website is designed around the same idea: less friction, more clarity, and a direct path from discovery to appointment.</p></div>
+  </div>
+  <div class="pillars">
+    <article class="pillar c1 reveal"><small>01</small><h3>Release</h3><p>Massage and bodywork for days when your shoulders are carrying too much.</p><b>Massage & spa</b></article>
+    <article class="pillar c2 reveal"><small>02</small><h3>Restore</h3><p>Facial and skin care with consultation, comfort and consistent care in mind.</p><b>Skin & facial</b></article>
+    <article class="pillar c3 reveal"><small>03</small><h3>Refresh</h3><p>Hair wash, nourishing treatments and styling in a relaxed private setting.</p><b>Hair care</b></article>
+    <article class="pillar c4 reveal"><small>04</small><h3>Renew</h3><p>Laser hair reduction and selected aesthetic care, with suitability assessed first.</p><b>Aesthetic care</b></article>
+  </div>
+</section>
+
+<section class="catalogue pad" id="catalogue">
+  <div class="catalogue-head">
+    <div><div class="eyebrow">02 · Treatment catalogue</div><h2 class="display reveal">Pick your kind of <i>pause.</i></h2></div>
+    <p>Publicly listed promotional prices are shown where available. Availability, suitability and final pricing are confirmed by AAMRA when you book.</p>
+  </div>
+  <div class="filters" role="tablist" aria-label="Treatment categories">
+    <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="spa">Spa</button><button class="filter" data-filter="skin">Skin</button><button class="filter" data-filter="hair">Hair</button><button class="filter" data-filter="laser">Laser</button><button class="filter" data-filter="mother">Postnatal</button>
+  </div>
+  <div class="grid">
+    <article class="card" data-cat="spa" data-service="Full Body Massage"><div class="card-top"><span>SPA · 60 MIN</span><strong class="price">RM98</strong></div><h3>Full Body Massage</h3><p>A classic full-body reset for tired muscles and a quieter headspace.</p><button class="add">Add to booking <span>+</span></button></article>
+    <article class="card featured" data-cat="spa" data-service="Anti-Stress Head Massage"><div class="tag">LISTED PROMO</div><div class="card-top"><span>SPA · HEAD</span><strong class="price">RM68 <s>RM98</s></strong></div><h3>Anti-Stress Head Massage</h3><p>Focused head and shoulder care for the days tension follows you home.</p><button class="add">Add to booking <span>+</span></button></article>
+    <article class="card" data-cat="skin" data-service="Facial Skin Treatment"><div class="card-top"><span>SKIN · FACIAL</span><strong class="price">RM88</strong></div><h3>Facial Skin Treatment</h3><p>A consultation-led facial session for cleansing, comfort and a refreshed look.</p><button class="add">Add to booking <span>+</span></button></article>
+    <article class="card" data-cat="skin" data-service="Radiant Glow Facial"><div class="card-top"><span>SKIN · GLOW</span><strong class="price">from RM58</strong></div><h3>Radiant Glow Facial</h3><p>A lighter entry treatment designed for a refreshed, brighter-looking complexion.</p><button class="add">Add to booking <span>+</span></button></article>
+    <article class="card" data-cat="spa" data-service="Revitalizing Package"><div class="tag">LISTED PROMO</div><div class="card-top"><span>SPA · PACKAGE</span><strong class="price">RM198 <s>RM284</s></strong></div><h3>Revitalizing Package</h3><p>A longer self-care session for when one treatment simply is not enough.</p><button class="add">Add to booking <span>+</span></button></article>
+    <article class="card" data-cat="hair" data-service="Hair Wash"><div class="card-top"><span>HAIR · CARE</span><strong class="price">RM28</strong></div><h3>Hair Wash</h3><p>A simple refresh, with broader hair treatment and styling options available.</p><button class="add">Add to booking <span>+</span></button></article>
+    <article class="card" data-cat="laser" data-service="Laser Hair Removal - Half Arm Trial"><div class="tag">FIRST-TIME TRIAL</div><div class="card-top"><span>LASER · HALF ARM</span><strong class="price">RM48 <s>RM98</s></strong></div><h3>Laser Hair Removal</h3><p>Half-arm first-time trial. Consultation, suitability assessment and terms apply.</p><button class="add">Add to booking <span>+</span></button></article>
+    <article class="card" data-cat="laser" data-service="Laser Hair Removal - Brazilian / Half Leg Bottom Trial"><div class="tag">FIRST-TIME TRIAL</div><div class="card-top"><span>LASER · SELECT AREA</span><strong class="price">RM108 <s>RM148</s></strong></div><h3>Brazilian / Half Leg Bottom</h3><p>First-time promotional rate for either listed area, subject to AAMRA confirmation.</p><button class="add">Add to booking <span>+</span></button></article>
+    <article class="card" data-cat="mother" data-service="7-Day Postnatal Care"><div class="card-top"><span>POSTNATAL · 7 DAYS</span><strong class="price">Enquire</strong></div><h3>7-Day Postnatal Care</h3><p>A structured first-week recovery programme with personalised wellness support.</p><button class="add">Add to booking <span>+</span></button></article>
+  </div>
+</section>
+
+<section class="founder pad" id="founder">
+  <div class="portrait reveal"><img src="https://drazraaziz.com/assets/pro.jpg" alt="Dr Azra Abd Aziz" loading="lazy"><div class="sig">Dr Azra</div></div>
+  <div class="founder-copy reveal"><div class="eyebrow">03 · Founder</div><h2 class="display">Care with a<br><i>human pulse.</i></h2><p class="quote">A wellness brand shaped by a medical doctor, built around helping people feel cared for from the inside out.</p><p>AAMRA was founded by <strong>Dr Azra Abd Aziz</strong>, a Malaysian medical doctor, wellness practitioner, mental-health advocate and entrepreneur.</p><div class="credentials"><span>Medical Doctor</span><span>Master of Public Health</span><span>Medical Aesthetic Training</span><span>Occupational Health Doctor</span></div></div>
+</section>
+
+<section class="book pad" id="book">
+  <div class="book-shell">
+    <div class="book-copy reveal"><div class="eyebrow">04 · Book your visit</div><h2 class="display">Your next hour<br>can feel <i>different.</i></h2><p>Choose a treatment and your preferred time. The form prepares the details and opens WhatsApp so AAMRA's team can confirm your appointment.</p><div class="facts"><div><span>OPEN</span><b>Tue to Sun, 11am to 8pm</b></div><div><span>WHATSAPP</span><b>+60 13-229 7259</b></div><div><span>LOCATION</span><b>Setia Alam, Shah Alam</b></div></div></div>
+    <form id="bookingForm" class="reveal">
+      <label class="field">Full name<input id="name" required placeholder="Your name"></label>
+      <label class="field">WhatsApp number<input id="phone" type="tel" required placeholder="01X-XXXXXXX"></label>
+      <label class="field full">Treatment<select id="service" required><option value="">Choose a treatment</option><option>Full Body Massage</option><option>Anti-Stress Head Massage</option><option>Facial Skin Treatment</option><option>Radiant Glow Facial</option><option>Revitalizing Package</option><option>Hair Wash</option><option>Laser Hair Removal - Half Arm Trial</option><option>Laser Hair Removal - Brazilian / Half Leg Bottom Trial</option><option>7-Day Postnatal Care</option><option>Other / Consultation</option></select></label>
+      <label class="field">Preferred date<input id="date" type="date" required></label>
+      <label class="field">Preferred time<select id="time" required><option value="">Select time</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option></select></label>
+      <label class="field full">Anything we should know?<textarea id="notes" rows="3" placeholder="First visit, preferred therapist, questions..."></textarea></label>
+      <button class="submit" type="submit">Continue on WhatsApp <span>↗</span></button>
+      <p class="formnote">Appointment is confirmed only after AAMRA replies. Treatment availability and pricing may change.</p>
+    </form>
+  </div>
+</section>
+
+<section class="pad" id="visit">
+  <div class="eyebrow">05 · Find AAMRA</div>
+  <div class="visit-grid">
+    <h2 class="display reveal">A little oasis<br>in <i>Setia Alam.</i></h2>
+    <div class="visit-info reveal">
+      <p class="address">25-1F, Persiaran Setia Utama,<br>Bandar Setia Alam, 40170 Shah Alam,<br>Selangor, Malaysia</p>
+      <div class="row"><span>Hours</span><b>Tuesday to Sunday · 11am to 8pm</b></div>
+      <div class="row"><span>WhatsApp</span><a href="https://wa.me/60132297259" target="_blank" rel="noopener">+60 13-229 7259 ↗</a></div>
+      <div class="row"><span>Email</span><a href="mailto:Aamra.wellness@gmail.com">Aamra.wellness@gmail.com ↗</a></div>
+      <div class="row"><span>Instagram</span><a href="https://www.instagram.com/aamrabeauty/" target="_blank" rel="noopener">@aamrabeauty ↗</a></div>
+    </div>
+  </div>
+  <a class="direction" href="https://www.google.com/maps/search/?api=1&query=25-1F+Persiaran+Setia+Utama+Bandar+Setia+Alam+40170+Shah+Alam" target="_blank" rel="noopener"><span>GET DIRECTIONS</span><strong>SETIA ALAM</strong><em>↗</em></a>
+</section>
+</main>
+
+<footer>
+  <div class="footerbrand"><span class="brandmark">A</span><span>AAMRA Wellness</span></div><p>Where your inner beauty shines.</p>
+  <div class="footerlinks"><a href="#catalogue">Treatments</a><a href="#book">Booking</a><a href="#founder">Dr Azra</a><a href="#visit">Contact</a></div>
+  <small>© <span id="year"></span> AAMRA Beauty & Wellness Centre. Concept website prepared from public business information.</small>
+</footer>
+<div class="toast" id="toast" role="status">Treatment added to your booking.</div>
+
+<script>
+  const filters = Array.from(document.querySelectorAll(".filter"));
+  const cards = Array.from(document.querySelectorAll(".card"));
+  filters.forEach(function(btn){
+    btn.addEventListener("click",function(){
+      filters.forEach(function(x){x.classList.remove("active")});
+      btn.classList.add("active");
+      const filter = btn.dataset.filter;
+      cards.forEach(function(card){card.classList.toggle("hide",filter !== "all" && card.dataset.cat !== filter)});
+    });
+  });
+  const service = document.getElementById("service");
+  const toast = document.getElementById("toast");
+  document.querySelectorAll(".add").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      const card = btn.closest(".card");
+      service.value = card.dataset.service;
+      document.getElementById("book").scrollIntoView({behavior:"smooth"});
+      toast.classList.add("show");
+      setTimeout(function(){toast.classList.remove("show")},2200);
+    });
+  });
+  const dateInput = document.getElementById("date");
+  const today = new Date();
+  dateInput.min = today.getFullYear()+"-"+String(today.getMonth()+1).padStart(2,"0")+"-"+String(today.getDate()).padStart(2,"0");
+  document.getElementById("year").textContent = today.getFullYear();
+  document.getElementById("bookingForm").addEventListener("submit",function(e){
+    e.preventDefault();
+    if(dateInput.value && new Date(dateInput.value+"T00:00:00").getDay() === 1){
+      alert("AAMRA is publicly listed as closed on Mondays. Please choose Tuesday to Sunday.");
+      return;
+    }
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const treatment = service.value;
+    const date = dateInput.value ? new Date(dateInput.value+"T00:00:00").toLocaleDateString("en-MY",{day:"numeric",month:"long",year:"numeric"}) : "";
+    const time = document.getElementById("time").value;
+    const notes = document.getElementById("notes").value.trim();
+    let msg = "Hi AAMRA, I'd like to request an appointment.\n\n";
+    msg += "Name: "+name+"\nWhatsApp: "+phone+"\nTreatment: "+treatment+"\nPreferred date: "+date+"\nPreferred time: "+time;
+    if(notes){msg += "\nNotes: "+notes}
+    msg += "\n\nPlease let me know the available slot and final price. Thank you.";
+    window.open("https://wa.me/60132297259?text="+encodeURIComponent(msg),"_blank","noopener");
+  });
+  const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("on");observer.unobserve(entry.target)}});
+  },{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){observer.observe(el)});
+</script>
+</body>
+</html>
